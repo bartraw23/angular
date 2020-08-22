@@ -6,7 +6,7 @@
 
     <input *ngIf="display" [(ngModel)]="title" type="text"/>
 
-    <button (click)="send($event)">Display toggle</button>
+    <button (click)="send($event)">Display toggle for input bar</button>
     <button (click)="title = 'Other title'">Change title</button>
 
     <div *ngFor="let human of humans">
