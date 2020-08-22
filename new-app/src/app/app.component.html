@@ -6,10 +6,12 @@
 
     <input *ngIf="display" [(ngModel)]="title" type="text"/>
 
-    <button (click)="send($event)">Display toggle for input bar</button>
+    <button  [ngStyle]="{'background-color': 'yellow', 'color':'red'}" (click)="send($event)">Display toggle for input bar</button>
     <button (click)="title = 'Other title'">Change title</button>
 
-    <div *ngFor="let human of humans">
-      {{human.name}} is {{human.age}} YO
+    <div *ngFor="let human of humans, let i=index">
+      <span [ngClass]="{'red': i%2 == 0}">
+         {{human.name}} is {{human.age}} YO
+      </span>
     </div>
 </div>

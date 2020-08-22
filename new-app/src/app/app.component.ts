@@ -4,6 +4,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  //styles: ['div{ color : blue; }']
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'new-app';
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
     ];
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     console.log('Component destroyed');
   }
 
