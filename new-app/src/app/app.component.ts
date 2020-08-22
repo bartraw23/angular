@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'new-app';
+  display = true;
 
-  send = function(evt){
-    console.log('have been sent');
-    console.log(evt);
+  send = function (evt) {
+    this.display = !this.display;
   }
 }
