@@ -9,4 +9,7 @@
     <button (click)="send($event)">Display toggle</button>
     <button (click)="title = 'Other title'">Change title</button>
 
+    <div *ngFor="let human of humans">
+      {{human.name}} is {{human.age}} YO
+    </div>
 </div>
