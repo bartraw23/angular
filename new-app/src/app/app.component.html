@@ -3,6 +3,8 @@
   <h1>
     {{ title }} app is running!
 
+    <input [(ngModel)]="title" type="text"/>
+
     <button (click)="send($event)">Some console</button>
     <button (click)="title = 'Other title'">Change title</button>
   </h1>
