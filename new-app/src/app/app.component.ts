@@ -13,6 +13,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   humans = [];
 
+  dateSome = new Date(1984,1,2);
+
+  cash = 2.55;
+
   constructor(private humanService: HumansService) { }
 
   ngOnInit() {
