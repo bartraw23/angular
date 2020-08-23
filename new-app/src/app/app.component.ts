@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { HumansService } from './humans.service';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +13,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   humans = [];
 
+  constructor(private humanService: HumansService) { }
+
   ngOnInit() {
     console.log('Component init');
-    this.humans = [
-      { name: 'Andrzej', age: 55 },
-      { name: 'Sławek', age: 33 }
-    ];
+    this.humans = this.humanService.getAllHumans();
   }
 
   ngOnDestroy() {
