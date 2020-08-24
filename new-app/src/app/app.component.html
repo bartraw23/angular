@@ -2,6 +2,10 @@
   <h1>
     {{ title | uppercase }} app is running!
   </h1>
+  <nav>
+    <a [routerLink]="['/one']" routerLinkActive="router-link-active">One</a><br>
+    <a [routerLink]="['/two']" routerLinkActive="router-link-active">Two</a><br>
+  </nav>
 
   <div>
     <input *ngIf="display" [(ngModel)]="title" type="text" />
