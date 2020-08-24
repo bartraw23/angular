@@ -1,1 +1,18 @@
-<p>frm works!</p>
+<p>form works!</p>
+
+<form [formGroup]="form" (ngSubmit)="send()">
+<label>Name </label>
+<input type="text" formControlName="name" />
+
+<br>
+<label>Surname </label>
+<input type="text" formControlName="surname" />
+
+<br>
+<label>Age </label>
+<input type="number" formControlName="age" />
+
+<button type="submit">Send</button>
+</form>
+
+{{ form.value | json }}
