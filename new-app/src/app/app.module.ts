@@ -6,12 +6,14 @@ import { HumansService } from './humans.service';
 import { AppRoutingModule } from './app-routing.module';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
+import { FrmComponent } from './frm/frm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OneComponent,
-    TwoComponent
+    TwoComponent,
+    FrmComponent
   ],
   imports: [
     BrowserModule,
