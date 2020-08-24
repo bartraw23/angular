@@ -1,1 +1,13 @@
-<p>one works!</p>
+<h1>
+    {{ title | uppercase }} app is running!
+</h1>
+
+<div>
+    <input *ngIf="display" [(ngModel)]="title" type="text" />
+</div>
+
+<button [ngStyle]="{'background-color': 'yellow', 'color':'red'}" (click)="send($event)">Display toggle for input
+    bar</button>
+<button (click)="title = 'Other title'">Change title</button>
+<h2>{{ dateSome | date:"short" }}</h2>
+<h2>{{ cash | currency:"EUR" }}</h2>

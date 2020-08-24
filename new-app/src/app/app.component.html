@@ -1,27 +1,8 @@
 <div class="text-align:center">
-  <h1>
-    {{ title | uppercase }} app is running!
-  </h1>
   <nav>
     <a [routerLink]="['/one']" routerLinkActive="router-link-active">One</a><br>
     <a [routerLink]="['/two']" routerLinkActive="router-link-active">Two</a><br>
   </nav>
-
-  <div>
-    <input *ngIf="display" [(ngModel)]="title" type="text" />
-  </div>
-
-  <button [ngStyle]="{'background-color': 'yellow', 'color':'red'}" (click)="send($event)">Display toggle for input
-    bar</button>
-  <button (click)="title = 'Other title'">Change title</button>
-
-  <div *ngFor="let human of humans, let i=index">
-    <span [ngClass]="{'red': i%2 == 0}">
-      {{human.name}} is {{human.age}} YO
-    </span>
-  </div>
-  <h2>{{ dateSome | date:"short" }}</h2>
-  <h2>{{ cash | currency:"EUR" }}</h2>
 </div>
 
 <router-outlet></router-outlet>

@@ -1,1 +1,8 @@
 <p>two works!</p>
+
+
+<div *ngFor="let human of humans, let i=index">
+    <span [ngClass]="{'red': i%2 == 0}">
+        {{human.name}} is {{human.age}} YO
+    </span>
+</div>
