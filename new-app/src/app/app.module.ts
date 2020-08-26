@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { FrmComponent } from './frm/frm.component';
+import { ChildComponent } from './frm/child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OneComponent,
     TwoComponent,
-    FrmComponent
+    FrmComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

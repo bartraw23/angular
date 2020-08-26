@@ -14,13 +14,22 @@ export class FrmComponent implements OnInit {
     age: new FormControl('')
   })
 
-  send(){
+
+  received: Boolean = false;
+
+  change(newData: boolean) {
+    console.log(newData);
+    this.received = newData;
+  }
+
+  send() {
     console.log(this.form.value)
   }
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

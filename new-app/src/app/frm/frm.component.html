@@ -1,18 +1,24 @@
 <p>form works!</p>
+<p>Change: {{ received }}</p>
 
 <form [formGroup]="form" (ngSubmit)="send()">
-<label>Name </label>
-<input type="text" formControlName="name" />
+    <label>Name </label>
+    <input type="text" formControlName="name" />
 
-<br>
-<label>Surname </label>
-<input type="text" formControlName="surname" />
+    <br>
+    <label>Surname </label>
+    <input type="text" formControlName="surname" />
 
-<br>
-<label>Age </label>
-<input type="number" formControlName="age" />
+    <br>
+    <label>Age </label>
+    <input type="number" formControlName="age" />
 
-<button type="submit">Send</button>
+    <button type="submit">Send</button>
 </form>
 
 {{ form.value | json }}
+
+<app-child [name]="form.value.name"
+    (changed) = "change($event)">
+
+</app-child>
