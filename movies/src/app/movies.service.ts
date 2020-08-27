@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Movie } from './models/movie'
+import { Movie } from './models/movie';
 
 
 
@@ -8,7 +8,7 @@ import { Movie } from './models/movie'
 })
 export class MoviesService {
 
-  movies: Movie[] = [{
+  private movies: Movie[] = [{
     id: 0,
     title: 'Inception',
     description: 'some desc',
@@ -26,4 +26,8 @@ export class MoviesService {
   }];
 
   constructor() { }
+
+  getMovies(){
+    return this.movies;
+  }
 }
