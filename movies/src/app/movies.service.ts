@@ -30,4 +30,8 @@ export class MoviesService {
   getMovies(){
     return this.movies;
   }
+  
+  getMovie(id: number): Movie {
+      return this.movies[id];
+  }
 }
